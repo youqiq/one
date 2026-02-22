@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
+implementation("com.github.recloudstream:cloudstream:master-SNAPSHOT")
 }
 
 tasks.jar {
