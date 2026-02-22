@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-implementation("com.github.recloudstream:cloudstream:master-SNAPSHOT")
+    implementation("com.github.recloudstream:cloudstream:master-SNAPSHOT")
 }
 
 tasks.jar {
