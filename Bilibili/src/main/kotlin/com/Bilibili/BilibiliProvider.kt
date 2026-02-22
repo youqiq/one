@@ -18,9 +18,9 @@ import java.net.URLEncoder
 
 class BilibiliProvider : MainAPI() {
     override var mainUrl = "https://www.bilibili.tv"
-    override var name = "BilibiliTV(Requires CS Prerelease)"
+    override var name = "BilibiliTV"
     override val hasMainPage = true
-    override var lang = "ta"
+    override var lang = "id"
     override val hasDownloadSupport = true
     override val supportedTypes = setOf(
         TvType.Anime,
