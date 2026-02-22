@@ -8,10 +8,10 @@ android {
 }
 
 cloudstream {
-    language = "ta"
+    language = "id"
     // All of these properties are optional, you can safely remove them
     description = "Bilibili TV - International streaming platform for anime, movies, and variety shows (bilibili.tv)"
-    authors = listOf("NivinCNC")
+    authors = listOf("youqiq")
     /**
      * Status int as the following:
      * 0: Down
