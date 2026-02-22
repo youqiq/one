@@ -1,4 +1,4 @@
-package com.AnimeSail
+package com.example
 
 import com.lagradost.api.Log
 import com.lagradost.cloudstream3.*
