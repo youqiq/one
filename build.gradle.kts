@@ -40,7 +40,7 @@ subprojects {
     }
 
     android {
-        namespace = "com.youqiq"
+        namespace = "com.Mohirufy"
 
         defaultConfig {
             minSdk = 21
