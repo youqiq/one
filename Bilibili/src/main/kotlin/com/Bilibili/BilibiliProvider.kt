@@ -1,6 +1,6 @@
 @file:OptIn(Prerelease::class)
 
-package com.cncverse
+package com.example
 
 import android.content.Context
 import android.util.Log
