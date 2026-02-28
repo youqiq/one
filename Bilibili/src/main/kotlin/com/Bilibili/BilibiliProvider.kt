@@ -1,5 +1,3 @@
-@file:OptIn(Prerelease::class)
-
 package com.example
 
 import android.content.Context
