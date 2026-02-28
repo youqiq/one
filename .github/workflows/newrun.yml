@@ -31,8 +31,15 @@ jobs:
       - name: Grant permission
         run: chmod +x gradlew
 
-      - name: Build project
-        run: ./gradlew assembleRelease
+      - name: Build Plugins
+        run: |
+          cd $GITHUB_WORKSPACE/src
+          chmod +x gradlew
+          ./gradlew make makePluginsJson
+          ./gradlew ensureJarCompatibility
+          cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
+          cp **/build/*.jar $GITHUB_WORKSPACE/builds
+          cp build/plugins.json $GITHUB_WORKSPACE/builds
 
       - name: Upload CS3 file
         uses: actions/upload-artifact@v4
