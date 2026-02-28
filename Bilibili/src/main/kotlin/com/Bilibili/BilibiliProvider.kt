@@ -101,7 +101,6 @@ class BilibiliProvider : MainAPI() {
         "search:fantasy" to "Fantasy",
         "search:adventure" to "Adventure",
         "search:isekai" to "Isekai",
-        "search:hindi" to "Hindi Dubbed",
         "search:tagalog" to "Tagalog Dubbed",
     )
 
