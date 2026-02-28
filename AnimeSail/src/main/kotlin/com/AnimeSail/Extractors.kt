@@ -92,6 +92,53 @@ class Acefile : ExtractorApi() {
     )
 }
 
+class Archivd : ExtractorApi() {
+    override val name: String = "Archivd"
+    override val mainUrl: String = "https://archivd.net"
+    override val requiresReferer = true
+
+    override suspend fun getUrl(
+        url: String,
+        referer: String?,
+        subtitleCallback: (SubtitleFile) -> Unit,
+        callback: (ExtractorLink) -> Unit
+    ) {
+        val res = app.get(url).document
+        val json = res.select("div#app").attr("data-page")
+        val video = AppUtils.tryParseJson<Sources>(json)?.props?.datas?.data?.link?.media
+        callback.invoke(
+            newExtractorLink(
+                this.name,
+                this.name,
+                video ?: return,
+                INFER_TYPE
+            ) {
+                this.referer = "$mainUrl/"
+            }
+        )
+    }
+
+    data class Link(
+        @JsonProperty("media") val media: String? = null,
+    )
+
+    data class Data(
+        @JsonProperty("link") val link: Link? = null,
+    )
+
+    data class Datas(
+        @JsonProperty("data") val data: Data? = null,
+    )
+
+    data class Props(
+        @JsonProperty("datas") val datas: Datas? = null,
+    )
+
+    data class Sources(
+        @JsonProperty("props") val props: Props? = null,
+    )
+}
+
 class Krakenfiles : ExtractorApi() {
     override val name = "Krakenfiles"
     override val mainUrl = "https://krakenfiles.com"
