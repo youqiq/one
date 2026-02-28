@@ -1,6 +1,5 @@
 name: Build One Extension
 
-# Trigger workflow ketika ada push atau PR ke main
 on:
   push:
     branches:
@@ -14,26 +13,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout kode dari repo
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # Setup Java (Java 17)
       - name: Setup Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
-      # Beri permission supaya gradlew bisa dijalankan
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
-      # Build extension dengan Gradle Wrapper
       - name: Build extension
         run: ./gradlew build
 
-      # Upload hasil build
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
