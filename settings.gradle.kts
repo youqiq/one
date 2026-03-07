@@ -1,4 +1,4 @@
-rootProject.name = "BilibiliTV"
+rootProject.name = "cs3"
 
 // This file sets what projects are included. All new projects should get automatically included unless specified in "disabled" variable.
 val disabled = listOf<String>()
