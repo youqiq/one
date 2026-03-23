@@ -3,6 +3,6 @@
     "description": "Cloudstream zero skill by F",
     "manifestVersion": 1,
     "pluginLists": [
-      "https://raw.githubusercontent.com/funeelo/zeeorepo/builds/plugins.json"
+      "https://raw.githubusercontent.com/youqiq/one/build/plugins.json"
     ]
 }
