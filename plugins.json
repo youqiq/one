@@ -17,8 +17,8 @@
         ],
         "version": 1,
         "internalName": "AnimeSail",
-        "jarUrl": "https://raw.githubusercontent.com/youqiq/one/builds/AnimeSail.jar",
-        "url": "https://raw.githubusercontent.com/youqiq/one/builds/AnimeSail.cs3",
+        "jarUrl": "https://raw.githubusercontent.com/youqiq/one/build/AnimeSail.jar",
+        "url": "https://raw.githubusercontent.com/youqiq/one/build/AnimeSail.cs3",
         "name": "AnimeSail"
     },
     {
@@ -38,7 +38,7 @@
         ],
         "version": 3,
         "internalName": "OtakudesuProvider",
-        "url": "https://raw.githubusercontent.com/youqiq/one/builds/OtakudesuProvider.cs3",
+        "url": "https://raw.githubusercontent.com/youqiq/one/build/OtakudesuProvider.cs3",
         "name": "OtakudesuProvider"
     }
 ]
